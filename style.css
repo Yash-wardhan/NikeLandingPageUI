@@ -1,0 +1,204 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+.wrapper{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{
+    height: 30px;
+    width: auto;
+}
+header nav{
+    margin:1.5em;
+}
+/* gap */
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 4.1em;
+}
+header nav ul a{
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+header nav ul a.active:before{
+    position: absolute;
+    content: '';
+    width: 30%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+
+nav ul li a:before{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(122,122,122) ;
+    bottom: -6px;
+    transition: width .3s;
+}
+nav ul li a:hover::before{
+    width: 35%;
+}
+
+/* Hero section  */
+main{
+    display: flex;
+    gap: 6rem;
+    margin-top: 5em;
+}
+.left-col{
+    width: 45%;
+}
+.right-col{
+    flex-grow: 1;
+}
+h1{
+    font-size: 3.2rem;
+    margin: 0;
+    text-transform: capitalize;
+}
+.head-line{
+    font-size: 1.2rem;
+}
+.cta-btn{
+    margin: 2em 0;
+}
+.cta-btn , .secondary-cta{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.primary-cta{
+    background-color: #f1e2d1;
+    font-size: 0.9rem;
+    color: black;
+    text-decoration: none;
+    border-radius: 1.9rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+}
+.primary-cta:hover{
+    background-color: #e3e0c7;
+}
+.secondary-cta {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: block;
+    padding: 1em 0;
+    align-items: center;
+}
+.secondary-cta svg{
+    width: 20px;
+    transition: transform .3s;
+
+}
+.secondary-cta:hover{
+    text-decoration: underline;
+}
+.secondary-cta:hover svg{
+    transform: translate(10px);
+}
+.news{
+    display: flex;
+    gap: 1rem;
+    padding: 1em 3rem;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+p.employees{
+    font-size: 3.3rem;
+    margin: 0;
+    font-weight: 200;
+    line-height: 100%;
+}
+p.details{
+    font-size: .8rem;
+}
+
+/* Right columns  */
+
+.right-col{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2,auto);
+    grid-template-areas: 
+    "left ."
+    "left ."
+    ;
+}
+.card{
+    border-radius: .8rem;
+    padding: 1em;
+    display: flex;
+    align-items: end;
+    background-position: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    font-size: 10px;
+    transition: background-size .3s;
+}
+.card1{
+    grid-area: left;
+    background-image: url('https://img.freepik.com/free-vector/sale-banner-with-product-description_1361-1333.jpg?w=1060&t=st=1672980768~exp=1672981368~hmac=d1e9daa666e36f0ef1c7401bd2bafec49c58f345fd4329c9578ba8b7fbfd0172');
+    background-size: cover;
+
+}
+.card2{
+    background-image: url('https://img.freepik.com/free-vector/modern-sale-banner-with-product-description_1361-1259.jpg?w=1060&t=st=1672981019~exp=1672981619~hmac=eb9d4447896af33ba0149cd4fdf72ce48115e9cae2841d44acae997b342c91f1');
+    background-position: cover;
+    background-size: cover;
+
+}
+.card3{
+    background-image: url('https://img.freepik.com/premium-photo/shopping-concept-fashion-studio-shot-white-sneakers-paper-bag-shopping_175682-9009.jpg?w=1060');
+    background-position: cover;
+    background-size: cover;
+}
+.cards-details{
+    background-color: white;
+    border-radius: .6em;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cards-details a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.cards-details{
+    font-size: 1rem;
+}
+.card:hover{
+    background-size: 120%;
+}
